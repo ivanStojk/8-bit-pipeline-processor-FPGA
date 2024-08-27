@@ -1,0 +1,5 @@
+verilog work "PMem.v"
+verilog work "DMem.v"
+verilog work "debounce.v"
+verilog work "ALU.v"
+verilog work "Processor.v"

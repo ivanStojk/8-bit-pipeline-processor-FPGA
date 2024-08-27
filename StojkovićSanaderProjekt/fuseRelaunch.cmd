@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Administrator/Desktop/SanaderStojkProjekt/SanaderStojkProjekt/pds3_naseop/Processor_test_isim_beh.exe" -prj "C:/Users/Administrator/Desktop/SanaderStojkProjekt/SanaderStojkProjekt/pds3_naseop/Processor_test_beh.prj" "work.Processor_test" "work.glbl" 

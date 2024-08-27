@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Aug 27 11:34:12 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk50" LOCATE = SITE "C9" LEVEL 1;
+COMP "clk_sporki" LOCATE = SITE "D18" LEVEL 1;
+COMP "d_out<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "d_out<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "d_out<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "d_out<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "d_out<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "d_out<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "d_out<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "d_out<7>" LOCATE = SITE "F9" LEVEL 1;
+COMP "rst_sporki" LOCATE = SITE "K17" LEVEL 1;
+COMP "adr<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "adr<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "adr<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "adr<3>" LOCATE = SITE "N17" LEVEL 1;
+NET "clk50_BUFGP/IBUFG" BEL "clk50_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

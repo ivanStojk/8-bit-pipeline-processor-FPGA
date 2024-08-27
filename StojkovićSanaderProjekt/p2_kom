@@ -1,0 +1,18 @@
+0100110100// LOADC R3 4 u R3 ucitaj 4
+0100010001// LOADC R1 1 u R2 ucitaj 1
+0100000010// LOADC R0 2 u R0 ucitaj 2
+0000000000// NOP 
+0011110001// STORE R3 1, na adresu 1 spremi sadržaj R3(4)
+0001100001// ADD R2 R0 R1, u R2 spremi rez zbranjanja R0 i R1, a to je 3
+0000000000// NOP
+0000000000// NOP
+0011101111// STORE R2 15, na adresu 15 spremi sadržaj R2(3)
+0010000001// LOAD R0 1, u R0 učitaj sa adrese 1(u ovom slučaju 4)
+0000000000// NOP
+0000000000// NOP
+0001101100// ADD R2 R3 R0, R2 je sada 8	
+0000000000// nop
+0000000000// nop
+0011101111// STORE R2 15, na adresi 15 je sada 8 i kraj programa
+SADRŽAJ NA POČETKU: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 
+SADRŽAJ MEMORIJE NA KRAJU: 0 4 2 3 4 5 6 7 8 9 10 11 12 13 14 8 

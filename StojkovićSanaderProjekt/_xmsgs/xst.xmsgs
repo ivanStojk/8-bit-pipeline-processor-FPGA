@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;Processor.v&quot; line 42 </arg>Connection to input port &apos;<arg fmt="%s" index="2">addr</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">Processor.v</arg>&quot; line <arg fmt="%d" index="2">31</arg>: Name conflict (<arg fmt="%s" index="3">&lt;ACC&gt; and &lt;acc&gt;, renaming ACC as acc_rnm0</arg>).
+</msg>
+
+<msg type="info" file="Xst" num="2546" delta="new" >&quot;<arg fmt="%s" index="1">PMem.v</arg>&quot; line <arg fmt="%d" index="2">29</arg>: reading initialization file &quot;<arg fmt="%s" index="3">p53</arg>&quot;.
+</msg>
+
+<msg type="info" file="Xst" num="2546" delta="old" >&quot;<arg fmt="%s" index="1">DMem.v</arg>&quot; line <arg fmt="%d" index="2">34</arg>: reading initialization file &quot;<arg fmt="%s" index="3">initialData1.dat</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">prog_mem</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">pc_out</arg>&gt; is never assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">IR3&lt;3:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_data_mem</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">IR3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Processor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">IR1_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Processor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">IR2_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Processor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">IR3_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Processor</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

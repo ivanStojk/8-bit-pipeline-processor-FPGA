@@ -1,0 +1,755 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Processor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Processor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Processor"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Processor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "PMem.v" in library work
+Compiling verilog file "DMem.v" in library work
+Module <PMem> compiled
+Compiling verilog file "debounce.v" in library work
+Module <DMem> compiled
+Module <debounce> compiled
+Module <clock_div> compiled
+Compiling verilog file "ALU.v" in library work
+Module <my_dff> compiled
+Compiling verilog file "Processor.v" in library work
+Module <ALU> compiled
+Module <Processor> compiled
+No errors in compilation
+Analysis of file <"Processor.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Processor> in library <work> with parameters.
+	ADD = "0001"
+	ADDI = "1001"
+	AND = "0110"
+	LOAD = "0010"
+	LOADC = "0100"
+	SHL = "0111"
+	SHR = "1000"
+	STORE = "0011"
+	XOR = "0101"
+
+Analyzing hierarchy for module <ALU> in library <work> with parameters.
+	ADD = "0001"
+	ADDI = "1001"
+	AND = "0110"
+	LOAD = "0010"
+	LOADC = "0100"
+	SHL = "0111"
+	SHR = "1000"
+	STORE = "0011"
+	XOR = "0101"
+
+Analyzing hierarchy for module <PMem> in library <work>.
+
+Analyzing hierarchy for module <DMem> in library <work>.
+
+Analyzing hierarchy for module <debounce> in library <work>.
+
+Analyzing hierarchy for module <clock_div> in library <work>.
+
+Analyzing hierarchy for module <my_dff> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Processor>.
+WARNING:Xst:863 - "Processor.v" line 31: Name conflict (<ACC> and <acc>, renaming ACC as acc_rnm0).
+	ADD = 4'b0001
+	ADDI = 4'b1001
+	AND = 4'b0110
+	LOAD = 4'b0010
+	LOADC = 4'b0100
+	SHL = 4'b0111
+	SHR = 4'b1000
+	STORE = 4'b0011
+	XOR = 4'b0101
+Module <Processor> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+	ADD = 4'b0001
+	ADDI = 4'b1001
+	AND = 4'b0110
+	LOAD = 4'b0010
+	LOADC = 4'b0100
+	SHL = 4'b0111
+	SHR = 4'b1000
+	STORE = 4'b0011
+	XOR = 4'b0101
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <PMem> in library <work>.
+INFO:Xst:2546 - "PMem.v" line 29: reading initialization file "p53".
+Module <PMem> is correct for synthesis.
+ 
+Analyzing module <DMem> in library <work>.
+INFO:Xst:2546 - "DMem.v" line 34: reading initialization file "initialData1.dat".
+Module <DMem> is correct for synthesis.
+ 
+Analyzing module <debounce> in library <work>.
+Module <debounce> is correct for synthesis.
+ 
+Analyzing module <clock_div> in library <work>.
+Module <clock_div> is correct for synthesis.
+ 
+Analyzing module <my_dff> in library <work>.
+Module <my_dff> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+    Found 8-bit adder for signal <alu_out$addsub0000>.
+    Found 8-bit xor2 for signal <alu_out$xor0000> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <PMem>.
+    Related source file is "PMem.v".
+WARNING:Xst:1781 - Signal <prog_mem> is used but never assigned. Tied to default value.
+    Found 16x10-bit ROM for signal <instr>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <PMem> synthesized.
+
+
+Synthesizing Unit <DMem>.
+    Related source file is "DMem.v".
+    Found 16x8-bit dual-port RAM <Mram_data_mem> for signal <data_mem>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <DMem> synthesized.
+
+
+Synthesizing Unit <clock_div>.
+    Related source file is "debounce.v".
+    Found 1-bit register for signal <slow_clk>.
+    Found 27-bit up counter for signal <counter>.
+    Found 27-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 41.
+    Found 27-bit comparator less for signal <slow_clk$cmp_lt0000> created at line 42.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <clock_div> synthesized.
+
+
+Synthesizing Unit <my_dff>.
+    Related source file is "debounce.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <my_dff> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "debounce.v".
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <Processor>.
+    Related source file is "Processor.v".
+WARNING:Xst:1306 - Output <pc_out> is never assigned.
+WARNING:Xst:646 - Signal <IR3<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <acc_rnm0>.
+    Found 1-bit register for signal <data_WE>.
+    Found 8-bit register for signal <dr_in>.
+    Found 8-bit 4-to-1 multiplexer for signal <dr_in$mux0000> created at line 167.
+    Found 10-bit register for signal <IR1>.
+    Found 10-bit register for signal <IR2>.
+    Found 10-bit register for signal <IR3>.
+    Found 8-bit register for signal <OP1>.
+    Found 8-bit 4-to-1 multiplexer for signal <OP1$mux0001> created at line 88.
+    Found 8-bit register for signal <OP2>.
+    Found 8-bit 4-to-1 multiplexer for signal <OP2$mux0001> created at line 94.
+    Found 8-bit 4-to-1 multiplexer for signal <OP2$mux0002>.
+    Found 4-bit up counter for signal <PC>.
+    Found 4-bit comparator less for signal <PC$cmp_lt0000> created at line 52.
+    Found 8-bit register for signal <REG0>.
+    Found 8-bit register for signal <REG1>.
+    Found 8-bit register for signal <REG2>.
+    Found 8-bit register for signal <REG3>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  95 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <Processor> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit dual-port RAM                                : 1
+# ROMs                                                 : 1
+ 16x10-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 27-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 20
+ 1-bit register                                        : 9
+ 10-bit register                                       : 3
+ 8-bit register                                        : 8
+# Comparators                                          : 5
+ 27-bit comparator greatequal                          : 2
+ 27-bit comparator less                                : 2
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 4
+ 8-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <IR2_0> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_1> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_2> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_3> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_0> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_1> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_2> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_3> of sequential type is unconnected in block <Processor>.
+
+Synthesizing (advanced) Unit <DMem>.
+INFO:Xst:3231 - The small RAM <Mram_data_mem> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <DI>            |          |
+    |     doA            | connected to signal <DO>            |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <doutadr>       |          |
+    |     doB            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+Unit <DMem> synthesized (advanced).
+WARNING:Xst:2677 - Node <IR2_0> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_1> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_2> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR2_3> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_0> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_1> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_2> of sequential type is unconnected in block <Processor>.
+WARNING:Xst:2677 - Node <IR3_3> of sequential type is unconnected in block <Processor>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit dual-port distributed RAM                    : 1
+# ROMs                                                 : 1
+ 16x10-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 27-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 95
+ Flip-Flops                                            : 95
+# Comparators                                          : 5
+ 27-bit comparator greatequal                          : 2
+ 27-bit comparator less                                : 2
+ 4-bit comparator less                                 : 1
+# Multiplexers                                         : 4
+ 8-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <IR1_9> (without init value) has a constant value of 0 in block <Processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR2_9> (without init value) has a constant value of 0 in block <Processor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IR3_9> (without init value) has a constant value of 0 in block <Processor>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Processor> ...
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Processor, actual ratio is 3.
+FlipFlop acc_rnm0_0 has been replicated 1 time(s)
+FlipFlop acc_rnm0_1 has been replicated 1 time(s)
+FlipFlop acc_rnm0_2 has been replicated 1 time(s)
+FlipFlop acc_rnm0_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <Processor> :
+	Found 2-bit shift register for signal <debounce2/d1/Q>.
+	Found 2-bit shift register for signal <debounce1/d1/Q>.
+Unit <Processor> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 150
+ Flip-Flops                                            : 150
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Processor.ngr
+Top Level Output File Name         : Processor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 475
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 62
+#      LUT2                        : 16
+#      LUT2_D                      : 4
+#      LUT3                        : 75
+#      LUT3_D                      : 7
+#      LUT3_L                      : 4
+#      LUT4                        : 86
+#      LUT4_D                      : 8
+#      LUT4_L                      : 9
+#      MUXCY                       : 99
+#      MUXF5                       : 30
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 152
+#      FD                          : 65
+#      FDE                         : 8
+#      FDR                         : 58
+#      FDRE                        : 4
+#      FDS                         : 17
+# RAMS                             : 8
+#      RAM16X1D                    : 8
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      159  out of   4656     3%  
+ Number of Slice Flip Flops:            152  out of   9312     1%  
+ Number of 4 input LUTs:                300  out of   9312     3%  
+    Number used as logic:               282
+    Number used as Shift registers:       2
+    Number used as RAMs:                 16
+ Number of IOs:                          19
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk1(debounce1/pb_out1:O)          | BUFG(*)(OP1_4)         | 100   |
+debounce2/u1/slow_clk              | NONE(debounce2/d2/Q)   | 3     |
+clk50                              | BUFGP                  | 56    |
+debounce1/u1/slow_clk              | NONE(debounce1/d2/Q)   | 3     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.851ns (Maximum Frequency: 170.911MHz)
+   Minimum input arrival time before clock: 2.059ns
+   Maximum output required time after clock: 5.593ns
+   Maximum combinational path delay: 6.371ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1'
+  Clock period: 5.743ns (frequency: 174.125MHz)
+  Total number of paths / destination ports: 1383 / 174
+-------------------------------------------------------------------------
+Delay:               5.743ns (Levels of Logic = 3)
+  Source:            acc_rnm0_2_1 (FF)
+  Destination:       REG0_1 (FF)
+  Source Clock:      clk1 rising
+  Destination Clock: clk1 rising
+
+  Data Path: acc_rnm0_2_1 to REG0_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             24   0.591   1.252  acc_rnm0_2_1 (acc_rnm0_2_1)
+     RAM16X1D:A2->SPO      1   1.225   0.424  data_mem/Mram_data_mem7 (dr_out<6>)
+     LUT4_D:I3->O          3   0.704   0.535  REG0_mux0000<6>11 (N17)
+     LUT4:I3->O            1   0.704   0.000  REG2_mux0000<6>1 (REG2_mux0000<6>)
+     FD:D                      0.308          REG2_6
+    ----------------------------------------
+    Total                      5.743ns (3.532ns logic, 2.211ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'debounce2/u1/slow_clk'
+  Clock period: 4.014ns (frequency: 249.128MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               4.014ns (Levels of Logic = 0)
+  Source:            debounce2/d1/Mshreg_Q (FF)
+  Destination:       debounce2/d1/Q (FF)
+  Source Clock:      debounce2/u1/slow_clk rising
+  Destination Clock: debounce2/u1/slow_clk rising
+
+  Data Path: debounce2/d1/Mshreg_Q to debounce2/d1/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16:CLK->Q          1   3.706   0.000  debounce2/d1/Mshreg_Q (debounce2/d1/Mshreg_Q)
+     FD:D                      0.308          debounce2/d1/Q
+    ----------------------------------------
+    Total                      4.014ns (4.014ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50'
+  Clock period: 5.851ns (frequency: 170.911MHz)
+  Total number of paths / destination ports: 2262 / 110
+-------------------------------------------------------------------------
+Delay:               5.851ns (Levels of Logic = 12)
+  Source:            debounce2/u1/counter_3 (FF)
+  Destination:       debounce2/u1/slow_clk (FF)
+  Source Clock:      clk50 rising
+  Destination Clock: clk50 rising
+
+  Data Path: debounce2/u1/counter_3 to debounce2/u1/slow_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.706  debounce2/u1/counter_3 (debounce2/u1/counter_3)
+     LUT1:I0->O            1   0.704   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<0>_0_rt (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<0>_0_rt)
+     MUXCY:S->O            1   0.464   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<0>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<0>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<1>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<1>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<2>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<2>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<3>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<3>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<4>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<4>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<5>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<5>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<6>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<6>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<7>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<7>1)
+     MUXCY:CI->O           1   0.059   0.000  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<8>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<8>1)
+     MUXCY:CI->O           1   0.459   0.420  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<9>_0 (debounce2/u1/Mcompar_counter_cmp_ge0000_cy<9>)
+     INV:I->O              1   0.704   0.420  debounce2/u1/Mcompar_counter_cmp_ge0000_cy<9>_inv_INV_0 (debounce2/u1/slow_clk_cmp_lt0000)
+     FDR:R                     0.911          debounce2/u1/slow_clk
+    ----------------------------------------
+    Total                      5.851ns (4.305ns logic, 1.546ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'debounce1/u1/slow_clk'
+  Clock period: 4.014ns (frequency: 249.128MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               4.014ns (Levels of Logic = 0)
+  Source:            debounce1/d1/Mshreg_Q (FF)
+  Destination:       debounce1/d1/Q (FF)
+  Source Clock:      debounce1/u1/slow_clk rising
+  Destination Clock: debounce1/u1/slow_clk rising
+
+  Data Path: debounce1/d1/Mshreg_Q to debounce1/d1/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16:CLK->Q          1   3.706   0.000  debounce1/d1/Mshreg_Q (debounce1/d1/Mshreg_Q)
+     FD:D                      0.308          debounce1/d1/Q
+    ----------------------------------------
+    Total                      4.014ns (4.014ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              1.975ns (Levels of Logic = 1)
+  Source:            adr<0> (PAD)
+  Destination:       data_mem/Mram_data_mem2 (RAM)
+  Destination Clock: clk1 rising
+
+  Data Path: adr<0> to data_mem/Mram_data_mem2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.757  adr_0_IBUF (adr_0_IBUF)
+     RAM16X1D:DPRA0            0.000          data_mem/Mram_data_mem2
+    ----------------------------------------
+    Total                      1.975ns (1.218ns logic, 0.757ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'debounce2/u1/slow_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            rst_sporki (PAD)
+  Destination:       debounce2/d1/Mshreg_Q (FF)
+  Destination Clock: debounce2/u1/slow_clk rising
+
+  Data Path: rst_sporki to debounce2/d1/Mshreg_Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  rst_sporki_IBUF (rst_sporki_IBUF)
+     SRL16:D                   0.421          debounce2/d1/Mshreg_Q
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'debounce1/u1/slow_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            clk_sporki (PAD)
+  Destination:       debounce1/d1/Mshreg_Q (FF)
+  Destination Clock: debounce1/u1/slow_clk rising
+
+  Data Path: clk_sporki to debounce1/d1/Mshreg_Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  clk_sporki_IBUF (clk_sporki_IBUF)
+     SRL16:D                   0.421          debounce1/d1/Mshreg_Q
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.593ns (Levels of Logic = 1)
+  Source:            data_mem/Mram_data_mem8 (RAM)
+  Destination:       d_out<7> (PAD)
+  Source Clock:      clk1 rising
+
+  Data Path: data_mem/Mram_data_mem8 to d_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO    1   1.901   0.420  data_mem/Mram_data_mem8 (d_out_7_OBUF)
+     OBUF:I->O                 3.272          d_out_7_OBUF (d_out<7>)
+    ----------------------------------------
+    Total                      5.593ns (5.173ns logic, 0.420ns route)
+                                       (92.5% logic, 7.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 32 / 8
+-------------------------------------------------------------------------
+Delay:               6.371ns (Levels of Logic = 3)
+  Source:            adr<3> (PAD)
+  Destination:       d_out<7> (PAD)
+
+  Data Path: adr<3> to d_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.757  adr_3_IBUF (adr_3_IBUF)
+     RAM16X1D:DPRA3->DPO    1   0.704   0.420  data_mem/Mram_data_mem2 (d_out_1_OBUF)
+     OBUF:I->O                 3.272          d_out_1_OBUF (d_out<1>)
+    ----------------------------------------
+    Total                      6.371ns (5.194ns logic, 1.177ns route)
+                                       (81.5% logic, 18.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.21 secs
+ 
+--> 
+
+Total memory usage is 276376 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

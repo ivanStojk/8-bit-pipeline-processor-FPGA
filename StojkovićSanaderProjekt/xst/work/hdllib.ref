@@ -1,0 +1,7 @@
+MO DMem NULL DMem.v vlg1F/_d_mem.bin 1724751207
+MO my_dff NULL debounce.v vlg05/my__dff.bin 1724751207
+MO debounce NULL debounce.v vlg1D/debounce.bin 1724751207
+MO clock_div NULL debounce.v vlg4A/clock__div.bin 1724751207
+MO Processor NULL Processor.v vlg54/_processor.bin 1724751207
+MO ALU NULL ALU.v vlg2A/_a_l_u.bin 1724751207
+MO PMem NULL PMem.v vlg7B/_p_mem.bin 1724751207
